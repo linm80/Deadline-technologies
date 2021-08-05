@@ -1,0 +1,407 @@
+@import './bulma.sass';
+
+@font-face {
+    font-family: 'Ubuntu Bold';
+    src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Light';
+    src: url('../fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat Extra Light';
+    src: url('../fonts/Montserrat-ExtraLight.ttf') format('truetype');
+}
+
+@mixin mobile-view {
+    @media (max-width: 768px) { @content; }
+}
+
+#fp-nav {
+    right: 88px ;
+    @include mobile-view {
+        right: 20px !important;
+    }
+
+    li {
+        height: 20px !important;
+        a {
+            span {
+                height: 15px !important;
+                width: 15px !important;
+                margin: 0px !important;
+                background: #ffffff50 !important;
+                
+            }
+    
+        }
+        .active {
+            span {
+                height: 15px !important;
+                width: 15px !important;
+                margin: 0px !important;
+                background: #ffffff !important;
+
+            }
+        }
+    }
+
+    
+
+    
+
+}
+
+#fullpage {
+    .section {
+        padding: 0 !important;
+    }
+
+    .footContent {
+        margin-left: 75px;
+        margin-bottom: 75px;
+    }
+
+    p {
+        font-family: 'Montserrat Extra Light';
+        color: #fff;
+    }
+
+    #main {
+        background-color: #00000070;
+        
+    }
+
+    #vr {
+        background-image: url('../design/Group\ 2.png');
+        background-position: center;
+
+        .vrSerContent {
+            background: url('../design/Making\ quality\ VR\ experience\ accessible\ for\ cheap\ without\ investing\ in\ costly\ equipement.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: -200px 0 0 -25%;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            @include mobile-view{
+                margin: -200px 0% 0 0%;
+                width: 80%;
+                left: 0;
+            }
+            height: 400px;
+            // transform:translateY(10px);
+        }
+        .bouira{
+            background: url('../design/bouira.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 50% 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+        .biskra{
+            background: url('../design/biskra.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 25% 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+        .khmiss-melyana{
+            background: url('../design/khmiss\ melyana.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 0 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+    }
+    #vrdev{
+        background-image: url('../design/zombieBack.png');
+        background-position: center;
+        .vrDevContent{
+            background: url('../design/Developing\ in\ demandAR\ &\ VR\ games\ and\ appsmaking\ the\ virtual\ world\ that\ we\ imagine\ a\ reality.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: -200px 0 0 -25%;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            @include mobile-view{
+                width: 80%;
+                left: 35%;
+            }
+            height: 400px;
+        }
+        .products{
+            background: url('../design/products.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 50% 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+        .rd{
+            background: url('../design/research\ &\ development.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 25% 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+        .moreInfo{
+            background: url('../design/more\ information.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 0 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+    }
+    #des3d{
+        background-image: url('../design/designBack.png');
+        background-position: center;
+        .designContent{
+            background: url('../design/Designing\ all\ sorts\ of\ 3Dobjects\ from\ scratch\ youridea\ can\ be\ a\ 3D\ object\ and\ weservice\ 3D\ printing.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: -200px 0 0 -25%;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            @include mobile-view{
+                width: 80%;
+                left: 35%;
+            }
+            height: 400px;
+        }
+        .portfolio{
+            background: url('../design/portfolio.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 50% 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+        .requestD{
+            background: url('../design/request\ a\ design.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 25% 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+        .printD{
+            background: url('../design/print\ your\ design.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: 0 0 35px 0;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            height: 1.5em;
+        }
+    }
+    #pcb{
+        background-image: url('../design/pcbBack.png');
+        background-position: center;
+        .pcbContent{
+            background: url('../design/Conception\ &\ design\ ofcircuit\ boards\,\ testing\ and\ printingPCBs\ is\ available\ on\ demand.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: -200px 0 0 -25%;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            @include mobile-view{
+                width: 80%;
+                left: 35%;
+            }
+            height: 400px;
+        }
+    }
+    #apps{
+        background-image: url('../design/webBack.png');
+        background-position: center;
+        .appsContent{
+            background: url('../design/Conception\,\ Design\ &\ Codemobile\ and\ desktop\ apps\ rangingfrom\ products\ to\ solutions\ for\ specific\ companies.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: -200px 0 0 -25%;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            @include mobile-view{
+                width: 80%;
+                left: 35%;
+            }
+            height: 400px;
+        }
+    }
+    #web{
+        background-image: url('../design/webBack.png');
+        background-position: center;
+        .webContent{
+            background: url('../design/Conception\ &\ design\ ofcircuit\ boards\,\ testing\ and\ printingPCBs\ is\ available\ on\ demand.svg') center no-repeat;
+            position: absolute;
+            background-size: contain;
+            margin: -200px 0 0 -25%;
+            top: 50%;
+            left: 50%;
+            width: 50%;
+            @include mobile-view{
+                width: 80%;
+                left: 35%;
+            }
+            height: 400px;
+        }
+    }
+}
+
+.logos {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 16;
+    opacity: 1;
+
+    .wlogo {
+        position: absolute;
+        background: url('../design/Component\ 1\ –\ 1.svg') center no-repeat;
+        background-size: contain;
+        margin: -200px 0 0 -25%;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 400px;
+        transition: top .4s, left .4s, width .4s, height .4s, margin .4s;
+    }
+
+    .smallLogo {
+        top: 75px;
+        left: 75px;
+        width: 130px;
+        height: 45px;
+        @include mobile-view{
+            top: 20px;
+            left: 20px;
+            
+        }
+        margin: 0;
+    }
+
+    .mlogo {
+        position: absolute;
+        top: 75px;
+        right: 75px;
+        width: 50px;
+        height: 50px;
+        @include mobile-view{
+            right: 20px;
+            top: 20px;
+            width: 50px;
+            height: 50px;
+        }
+        background: url('../design/LOGO.svg') center no-repeat;
+        background-size: contain;
+
+    }
+}
+.footInfo{
+    font-family: 'Ubuntu Bold';
+    color: #fff;
+    margin-bottom: 35px;
+    
+}
+
+.slide-top {
+    
+	-webkit-animation: slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.slide-bottom {
+	-webkit-animation: slide-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50%{
+        -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+
+
+@-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50%{
+        -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50%{
+        -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  
+  

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+
+    <script type="text/javascript" src="./js/fullpage.min.js"></script>
+    <script src="./js/three.js"></script>
+    <!-- <script src="./js/panolens.js"></script> -->
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section" data-anchor="Deadline-Technologies" id="main">
+            <section class="hero is-fullheight">
+                <div class="hero-body">
+
+                </div>
+                <div class="hero-foot">
+                    <p class="footContent">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius
+                        hendrerit justo vitae
+                        blandit. Nulla."</p>
+                </div>
+            </section>
+        </div>
+        <div class="section" data-anchor="VR-Services" id="vr">
+            <section class="hero is-fullheight" id="vrSerContainer">
+                <!-- <iframe src="./zombie.html"></iframe> -->
+                <div class="hero-body">
+                    <div class="vrSerContent" id="vrSerContent"></div>
+                </div>
+                <div class="hero-foot footInfo">
+                    <div class="bouira"></div>
+                    <div class="biskra"></div>
+                    <div class="khmiss-melyana"></div>
+                </div>
+            </section>
+        </div>
+        <div class="section" data-anchor="VR&AR-Development" id="vrdev">
+            <audio id="zAudio" src="./sounds/zombie.mp3" autoplay="false"></audio>
+            <section class="hero is-fullheight" id="vrDevContainer">
+                <div class="hero-body" style="padding: 0;">
+                    <div class="vrDevContent" id="vrDevContent"></div>
+                </div>
+                <div class="hero-foot footInfo" style="margin: 0;">
+
+                    <div class="products"></div>
+                    <div class="rd"></div>
+                    <div class="moreInfo"></div>
+
+
+                </div>
+            </section>
+        </div>
+        <div class="section" data-anchor="3D-Design" id="des3d">
+            <section class="hero is-fullheight">
+                <div class="hero-body">
+                    <div class="designContent" id="designContent"></div>
+                </div>
+                <div class="hero-foot footInfo">
+                    
+                        <div class="portfolio"></div>
+                        <div class="requestD"></div>
+                        <div class="printD"></div>
+                    
+            </section>
+        </div>
+        <div class="section" data-anchor="PCB-Conception" id="pcb">
+            <section class="hero is-fullheight">
+                <div class="hero-body">
+                    <div class="pcbContent" id="pcbContent"></div>
+                </div>
+                <div class="hero-foot footInfo">
+                    <div class="columns">
+                        <div class="column is-3 is-offset-3">print your design</div>
+                        <div class="column is-3">request a design</div>
+                        <div class="column is-3">more information</div>
+                    </div>
+                    <!-- <div class="footContent">
+                        <ul>
+                            <li>bouira</li>
+                            <li>biskra</li>
+                            <li>khmiss-melyana</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+        <div class="section" data-anchor="Apps-Development" id="apps">
+            <section class="hero is-fullheight">
+                <div class="hero-body">
+                    <div class="appsContent" id="appsContent"></div>
+                </div>
+                <div class="hero-foot footInfo">
+                    <div class="columns">
+                        <div class="column is-2 is-offset-5">apss & software</div>
+                        <div class="column is-2">request an app</div>
+                        <div class="column is-3">more information</div>
+                    </div>
+                    <!-- <div class="footContent">
+                        <ul>
+                            <li>bouira</li>
+                            <li>biskra</li>
+                            <li>khmiss-melyana</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+        <div class="section" data-anchor="Web-Services" id="web">
+            <section class="hero is-fullheight">
+                <div class="hero-body">
+                    <div class="webContent" id="webContent"></div>
+                </div>
+                <div class="hero-foot footInfo">
+                    <div class="columns">
+                        <div class="column is-2 is-offset-5">bouira</div>
+                        <div class="column is-2">biskra</div>
+                        <div class="column is-2">khmiss-melyana</div>
+                    </div>
+                    <!-- <div class="footContent">
+                        <ul>
+                            <li>bouira</li>
+                            <li>biskra</li>
+                            <li>khmiss-melyana</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <div class="logos">
+        <div class="wlogo" id="wlogo"></div>
+        <div class="mlogo"></div>
+    </div>
+
+    <script>
+        new fullpage('#fullpage', {
+            //options here
+            autoScrolling: true,
+            scrollHorizontally: true,
+            navigation: true,
+            anchors: ['Deadline-Technologies', 'VR-Services', 'VR-Development', '3D-Design', 'PCB-Conception',
+                'Apps-Development', 'Web-Services'
+            ],
+            onLeave: function (origin, destination, direction) {
+                var wlogo = document.getElementById("wlogo");
+                var vrSerContent = document.getElementById("vrSerContent");
+                var vrDevContent = document.getElementById("vrDevContent");
+                var designContent = document.getElementById("designContent");
+                var pcbContent = document.getElementById("pcbContent");
+                var appsContent = document.getElementById("appsContent");
+                var webContent = document.getElementById("webContent");
+                var zaudio = document.getElementById("zAudio");
+                zaudio.volume = 0.05;
+
+                var leavingSection = this;
+
+                //logo animation
+                if (origin.index == 0) {
+                    wlogo.classList.add("smallLogo");
+
+                }
+                if (destination.index == 0) {
+                    wlogo.classList.remove("smallLogo");
+                }
+
+                //slide top animation
+                if (destination.index == 1) {
+                    if (direction == 'up') {
+                        vrSerContent.classList.add("slide-top");
+                    }
+                    if (direction == 'down') {
+                        vrSerContent.classList.add("slide-bottom");
+                    }
+
+                } else {
+                    vrSerContent.classList.remove("slide-top");
+                    vrSerContent.classList.remove("slide-bottom");
+                }
+
+                if (destination.index == 2) {
+                    zaudio.play();
+                    if (direction == 'up') {
+                        vrDevContent.classList.add("slide-top");
+                    }
+                    if (direction == 'down') {
+                        vrDevContent.classList.add("slide-bottom");
+                    }
+
+                } else {
+                    vrDevContent.classList.remove("slide-top");
+                    vrDevContent.classList.remove("slide-bottom");
+                }
+
+                if (destination.index == 3) {
+                    if (direction == 'up') {
+                        designContent.classList.add("slide-top");
+                    }
+                    if (direction == 'down') {
+                        designContent.classList.add("slide-bottom");
+                    }
+
+                } else {
+                    designContent.classList.remove("slide-top");
+                    designContent.classList.remove("slide-bottom");
+                }
+
+                if (destination.index == 4) {
+                    if (direction == 'up') {
+                        pcbContent.classList.add("slide-top");
+                    }
+                    if (direction == 'down') {
+                        pcbContent.classList.add("slide-bottom");
+                    }
+                } else {
+                    pcbContent.classList.remove("slide-top");
+                    pcbContent.classList.remove("slide-bottom");
+
+                }
+
+                if (destination.index == 5) {
+                    if (direction == 'up') {
+                        appsContent.classList.add("slide-top");
+                    }
+                    if (direction == 'down') {
+                        appsContent.classList.add("slide-bottom");
+                    }
+                } else {
+                    appsContent.classList.remove("slide-top");
+                    appsContent.classList.remove("slide-bottom");
+                }
+
+                if (destination.index == 6) {
+                    if (direction == 'up') {
+                        webContent.classList.add("slide-top");
+                    }
+                    if (direction == 'down') {
+                        webContent.classList.add("slide-bottom");
+                    }
+
+                } else {
+                    webContent.classList.remove("slide-top");
+                    webContent.classList.remove("slide-bottom");
+
+                }
+
+
+            }
+        });
+    </script>
+    <script>
+        var camera, scene, renderer;
+
+        var isUserInteracting = false,
+            onMouseDownMouseX = 0,
+            onMouseDownMouseY = 0,
+            lon = 0,
+            onMouseDownLon = 0,
+            lat = 0,
+            onMouseDownLat = 0,
+            phi = 0,
+            theta = 0;
+
+        init();
+        animate();
+
+        function init() {
+
+            var container, mesh;
+
+            container = document.getElementById('vrDevContainer');
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 1100);
+            camera.target = new THREE.Vector3(0, 0, 0);
+
+            scene = new THREE.Scene();
+
+            var geometry = new THREE.SphereGeometry(500, 60, 40);
+            geometry.scale(-1, 1, 1);
+
+            var material = new THREE.MeshBasicMaterial({
+                map: new THREE.TextureLoader().load(
+                    './design/zBack.png'
+                )
+            });
+
+            mesh = new THREE.Mesh(geometry, material);
+
+            scene.add(mesh);
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+            document.addEventListener('mousedown', onDocumentMouseDown, false);
+            document.addEventListener('mousemove', onDocumentMouseMove, false);
+            document.addEventListener('mouseup', onDocumentMouseUp, false);
+            document.addEventListener('wheel', onDocumentMouseWheel, false);
+
+            //
+
+            document.addEventListener('dragover', function (event) {
+
+                event.preventDefault();
+                event.dataTransfer.dropEffect = 'copy';
+
+            }, false);
+
+            document.addEventListener('dragenter', function (event) {
+
+                document.body.style.opacity = 0.5;
+
+            }, false);
+
+            document.addEventListener('dragleave', function (event) {
+
+                document.body.style.opacity = 1;
+
+            }, false);
+
+            document.addEventListener('drop', function (event) {
+
+                event.preventDefault();
+
+                var reader = new FileReader();
+                reader.addEventListener('load', function (event) {
+
+                    material.map.image.src = event.target.result;
+                    material.map.needsUpdate = true;
+
+                }, false);
+                reader.readAsDataURL(event.dataTransfer.files[0]);
+
+                document.body.style.opacity = 1;
+
+            }, false);
+
+            //
+
+            window.addEventListener('resize', onWindowResize, false);
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+        }
+
+        function onDocumentMouseDown(event) {
+
+            event.preventDefault();
+
+            isUserInteracting = true;
+
+            onPointerDownPointerX = event.clientX;
+            onPointerDownPointerY = event.clientY;
+
+            onPointerDownLon = lon;
+            onPointerDownLat = lat;
+
+        }
+
+        function onDocumentMouseMove(event) {
+
+            if (isUserInteracting === true) {
+
+                lon = (onPointerDownPointerX - event.clientX) * 0.1 + onPointerDownLon;
+                lat = (event.clientY - onPointerDownPointerY) * 0.1 + onPointerDownLat;
+
+            }
+
+        }
+
+        function onDocumentMouseUp(event) {
+
+            isUserInteracting = false;
+
+        }
+
+        function onDocumentMouseWheel(event) {
+
+            camera.fov += event.deltaY * 0.05;
+            camera.updateProjectionMatrix();
+
+        }
+
+        function animate() {
+
+            requestAnimationFrame(animate);
+            update();
+
+        }
+
+        function update() {
+
+            if (isUserInteracting === false) {
+
+                lon += 0.1;
+
+            }
+
+            lat = Math.max(-85, Math.min(85, lat));
+            phi = THREE.Math.degToRad(90 - lat);
+            theta = THREE.Math.degToRad(lon);
+
+            camera.target.x = 500 * Math.sin(phi) * Math.cos(theta);
+            camera.target.y = 500 * Math.cos(phi);
+            camera.target.z = 500 * Math.sin(phi) * Math.sin(theta);
+
+            camera.lookAt(camera.target);
+
+            /*
+            // distortion
+            camera.position.copy( camera.target ).negate();
+            */
+
+            renderer.render(scene, camera);
+
+        }
+    </script>
+</body>
+
+</html>
